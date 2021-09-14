@@ -6,7 +6,7 @@
     "name": "Thomas La Salmonie",
     "email": "tlasalmonie@gmail.com"
   },
-  "main": ".dist/vue-hello-world-simple.common.js",
+  "main": ".dist/vue-analytics-charts.common.js",
   "files": [
     "dist/*"
   ],
@@ -21,7 +21,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name vue-hello-world-simple ./src/install.js",
+    "build-library": "vue-cli-service build --target lib --name vue-analytics-charts ./src/install.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
