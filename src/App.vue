@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <vue-analytics-charts title="Page views" api-url="http://127.0.0.1:3009/api/analytics"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VueAnalyticsCharts from './components/VueAnalyticsCharts.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VueAnalyticsCharts
   }
 }
 </script>
