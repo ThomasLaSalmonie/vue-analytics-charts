@@ -1,12 +1,15 @@
 {
   "name": "vue-analytics-charts",
-  "version": "0.1.0",
+  "version": "0.1.8",
   "private": false,
   "author": {
     "name": "Thomas La Salmonie",
     "email": "tlasalmonie@gmail.com"
   },
-  "main": "./dist/vue-analytics-charts.common.js",
+  "main": "dist/vue-analytics-charts.umd.js",
+  "browser": {
+    "./sfc": "src/my-component.vue"
+  },
   "files": [
     "dist/*"
   ],
@@ -15,7 +18,9 @@
   "keywords": [
     "vue",
     "charts",
-    "analytics"
+    "analytics",
+    "google analytics",
+    "apexcharts"
   ],
   "license": "MIT",
   "scripts": {
@@ -29,7 +34,6 @@
     "axios": "^0.21.4",
     "core-js": "^3.6.5",
     "moment": "^2.29.1",
-    "vue": "^2.6.11",
     "vue-apexcharts": "^1.6.2",
     "vue2-datepicker": "^3.10.1"
   },
@@ -42,6 +46,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.40.1",
     "sass-loader": "10.1.1",
+    "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

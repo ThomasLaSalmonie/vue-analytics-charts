@@ -1,16 +1,26 @@
 import VueAnalyticsCharts from './components/VueAnalyticsCharts.vue';
 
-const VueAnalyticsChartsSimple = {
- install(Vue) {
-  // Let's register our component globally
-  // https://vuejs.org/v2/guide/components-registration.html
-  Vue.component('vue-analytics-charts', VueAnalyticsCharts);
- }
-};
-
-// Automatic installation if Vue has been added to the global scope.
-if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(VueAnalyticsChartsSimple);
+function install(Vue) {
+  if (install.installed) return
+  install.installed = true
+  Vue.component('VueAnalyticsCharts', VueAnalyticsCharts)
 }
 
-export default VueAnalyticsChartsSimple;
+const plugin = {
+  install
+}
+
+let GlobalVue = null
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.vue
+}
+
+if (GlobalVue) {
+  GlobalVue.use(plugin)
+}
+
+VueAnalyticsCharts.install = install
+
+export default VueAnalyticsCharts;
