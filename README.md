@@ -38,7 +38,7 @@ Vue.use(VueAnalyticsCharts)
 
 ## Usage
 
-![example](./example_vueanalyticscharts.png)
+![example](https://raw.githubusercontent.com/ThomasLaSalmonie/vue-analytics-charts/master/example_vueanalyticscharts.png)
 
 Use controller from [koa-analytics-service](https://www.npmjs.com/package/koa-analytics-service) to an easy use
 ### Quick example
